@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MileageTracker</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<%= link_to "Sign Up", new_subcontractor_path %>
+	<%= link_to "Create Client", new_client_path %>
+
+	<%- flash.each do |type, message| %>
+	  <p>There was a <%= type %> for you. <%= message %></p>
+	<%- end %>
+<%= yield %>
+
+</body>
+</html>
