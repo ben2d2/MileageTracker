@@ -13,7 +13,7 @@ class ClientsController < ApplicationController
   def create
 		if @client.save
       flash[:notice] = "Your client has been saved."
-      redirect_to clients_index_path
+      render :index
     else
       flash[:error] = "Your client couldn't be saved. #{@client.errors.full_messages.join}"
       render :new

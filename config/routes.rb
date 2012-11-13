@@ -1,11 +1,9 @@
 MileageTracker::Application.routes.draw do
-  get "clients/index"
+  devise_for :users, :controllers => { :registrations => "registrations" }
+  
+  root :to => 'subcontractors#index'
 
-  get "subcontractors/index"
-
-  root :to => 'home#index'
-
-  resources :subcontractors, only: [:index, :new, :create]
+  resources :subcontractors, only: [:index, :new, :create, :show]
 
   resources :clients, only: [:index, :new, :create]
 

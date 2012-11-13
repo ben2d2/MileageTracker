@@ -1,7 +1,9 @@
 class Subcontractor < ActiveRecord::Base
 
-  # Setup accessible (or protected) attributes for your model
-  validates_presence_of :email, :first_name, :last_name, :phone
+	belongs_to :user, class_name: "User"
 
-  attr_accessible :email, :first_name, :last_name, :phone
+  # Setup accessible (or protected) attributes for your model
+  validates_presence_of :first_name, :last_name, :phone
+
+  attr_accessible :first_name, :last_name, :phone
 end
