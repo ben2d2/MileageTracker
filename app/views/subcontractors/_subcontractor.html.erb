@@ -2,6 +2,8 @@
 <h4><%= subcontractor.first_name %> <%= subcontractor.last_name %></h4>
 <p><%= subcontractor.user.email %></p>
 <p><%= subcontractor.phone %></p>
+<table><tr><th>Date</th><th>Client ID</th><th>Miles</th></tr>
+<%= render subcontractor.mileage_records %></table>
 <%- else %>
-Not signed in
+<p>You are not signed in.</p>
 <%- end %>

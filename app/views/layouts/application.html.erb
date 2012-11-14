@@ -5,19 +5,22 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<%- if user_signed_in? %>
-		<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+		<div id="nav"><%- if user_signed_in? %>
+		<%= link_to "Sign Out", destroy_user_session_path, method: :delete %> | 
+		<%= link_to "Record Mileage", new_mileage_record_path %> | 
 	<%- else %>
 		<%= link_to "Sign Up", new_user_registration_path %> | 
 		<%= link_to "Sign In", new_user_session_path %> | 
 		<%= link_to "Create Client", new_client_path %> 
-	<%- end %>
+	<%- end %></div>
+	<header><h1>Mileage Tracker</h1></header>
 	<%- flash.each do |type, message| %>
 	  <p>There was a <%= type %> for you. <%= message %></p>
 	<%- end %>
-<%= yield %>
-
+<section><%= yield %></section>
+<footer>Copyright © 2012 Ben Bridges</footer>
 </body>
 </html>

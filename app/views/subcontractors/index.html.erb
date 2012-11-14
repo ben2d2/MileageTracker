@@ -1,2 +1,6 @@
-<h1>Subcontractor</h1>
+<%- if user_signed_in? %>
+<h2>Subcontractor</h2>
+<%- else %>
+<h1>Welcome!</h1>
+<%- end %>
 <%= render @subcontractor %>
