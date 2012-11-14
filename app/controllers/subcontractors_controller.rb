@@ -4,7 +4,7 @@ class SubcontractorsController < ApplicationController
 
 	def index
     if user_signed_in?
-  		@subcontractor = Subcontractor.where(:user_id => current_user.id)
+  		@subcontractor = Subcontractor.where(:user_id => current_user)
     else
       "Please sign in!"
     end
