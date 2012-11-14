@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(:version => 20121113162539) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "mileage_records", :force => true do |t|
+    t.integer  "subcontractor_id"
+    t.integer  "client_id"
+    t.string   "date"
+    t.string   "miles"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
   create_table "subcontractors", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
