@@ -11,3 +11,103 @@
  *= require_self
  *= require_tree .
  */
+body {
+	font-family: 'Montserrat', sans-serif;	margin: 0px;
+	color: #333333;
+}
+
+header {
+	height:60px;
+	background-color: #336699;
+	margin: 0px;
+	padding: 5px;
+	color: #fff;
+
+}
+section {
+	background-color: #ffffff;
+	margin: 0px;
+	padding: 5px;
+	color: #333;
+}
+h1 {
+	margin: 10px;
+}
+h2 {
+	margin: 10px;
+}
+h3 {
+	margin: 10px;
+}
+h4 {
+	margin: 10px;
+}
+p {
+	margin: 10px;
+	padding: 5px;
+}
+form {
+	margin: 10px;
+}
+
+#nav {
+	height: 15px;
+	padding: 10px;
+	background-color: #333333;
+	text-align: left;
+	font-size: 14px;
+	line-height: 15px;
+}
+
+#nav a:link{
+	color: #ffffff;
+}
+#nav a:visited{
+	color: #ffffff;
+}
+#nav a:hover{
+	color: #336699;
+}
+
+a:link{
+	color: #333333;
+}
+a:visited{
+	color: #333333;
+}
+a:hover{
+	color: #336699;
+}
+
+table {
+width:100%;
+margin: 10px;
+
+}
+
+th {
+	width:30%;
+	height:20px;
+	padding: 5px;
+	border: solid 1px #333;
+	float: left;
+	background-color: #cccccc;
+}
+td {
+	width:30%;
+	height:20px;
+	padding: 5px;
+	border: solid 1px #333;
+	float: left;
+}
+
+footer {
+	height:10px;
+	background-color: #336699;
+	margin: 0px;
+	padding: 10px;
+	color: #fff;
+	font-size: 10px;
+	line-height: 10px;
+
+}
