@@ -20,7 +20,7 @@ def sign_in_as user
   steps %Q{
     Given I am on the homepage
     When I click "Sign In"
-    And I fill in "#{user.email}" for "Email"
+    And I fill in "#{subcontractor.user.email}" for "Email"
     And I fill in "password" for "Password"
     And I click "Sign in"
     Then I should see "You are now signed in."
