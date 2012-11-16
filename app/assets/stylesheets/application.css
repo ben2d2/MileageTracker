@@ -42,6 +42,15 @@ h3 {
 h4 {
 	margin: 10px;
 }
+h5 {
+	height:15px;
+	background-color: #333333;
+	margin: 0px;
+	padding: 10px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 16px;
+}
 p {
 	margin: 10px;
 	padding: 5px;
@@ -51,7 +60,7 @@ form {
 }
 
 #nav {
-	height: 15px;
+	height: 20px;
 	padding: 10px;
 	background-color: #333333;
 	text-align: left;
@@ -61,12 +70,17 @@ form {
 
 #nav a:link{
 	color: #ffffff;
+	text-decoration: none;
 }
 #nav a:visited{
 	color: #ffffff;
+	text-decoration: none;
+
 }
 #nav a:hover{
 	color: #336699;
+	text-decoration: underline;
+
 }
 
 a:link{
@@ -81,12 +95,12 @@ a:hover{
 
 table {
 width:100%;
-margin: 10px;
+margin: 5px;
 
 }
 
 th {
-	width:30%;
+	width:32%;
 	height:20px;
 	padding: 5px;
 	border: solid 1px #333;
@@ -94,7 +108,7 @@ th {
 	background-color: #cccccc;
 }
 td {
-	width:30%;
+	width:32%;
 	height:20px;
 	padding: 5px;
 	border: solid 1px #333;
