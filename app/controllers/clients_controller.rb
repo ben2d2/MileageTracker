@@ -10,6 +10,10 @@ class ClientsController < ApplicationController
 		@client = Client.new
   end
 
+  def show
+    @client = Client.find(params[:id])
+  end
+
   def create
 		if @client.save
       flash[:notice] = "Your client has been saved."

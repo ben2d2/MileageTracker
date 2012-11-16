@@ -4,14 +4,14 @@ class SubcontractorsController < ApplicationController
 
 	def index
     if subcontractor_signed_in?
-  		@subcontractor = Subcontractor.find(current_subcontractor)
+      @subcontractor = Subcontractor.find(current_subcontractor)
     else
-      "Please sign in!"
+  		@subcontractor = Subcontractor.all
     end
 	end	
 
   def show
-    @subcontractor = Subcontractor.find(current_subcontractor)
+      @subcontractor = Subcontractor.find(params[:id])
   end 
 
 	def create

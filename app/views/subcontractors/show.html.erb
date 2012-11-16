@@ -1,1 +1,6 @@
-<%= render @subcontractor %>
+<%- if subcontractor_signed_in? %>
+	<%= render @subcontractor %>
+<%- else %>
+	PLEASE SIGN IN!
+<%- end %>
+

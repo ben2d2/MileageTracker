@@ -6,7 +6,7 @@ MileageTracker::Application.routes.draw do
 
   resources :subcontractors, only: [:index, :new, :create, :show]
 
-  resources :clients, only: [:index, :new, :create]
+  resources :clients, only: [:index, :new, :create, :show]
 
   resources :mileage_records, only: [:index, :new, :create]
 

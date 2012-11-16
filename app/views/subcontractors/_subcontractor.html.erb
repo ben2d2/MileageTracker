@@ -3,7 +3,13 @@
 <p><%= subcontractor.email %></p>
 <p><%= subcontractor.phone %></p>
 <h5>Mileage Records</h5>
-<table><tr><th>Date</th><th>Client ID</th><th>Miles</th></tr>
+<table><tr><th>Date</th>
+	<%- if current_page?('/') %>
+		<th>Client</th>
+	<%- else %>
+		<th>Subcontractor</th>
+	<%- end %>
+	<th>Miles</th></tr>
 <%= render subcontractor.mileage_records %></table>
 <%- else %>
 <p>You are not signed in.</p>
