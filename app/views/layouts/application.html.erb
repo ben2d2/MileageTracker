@@ -8,13 +8,13 @@
 <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 </head>
 <body>
-		<div id="nav"><%- if user_signed_in? %>
+		<div id="nav"><%- if subcontractor_signed_in? %>
 		<%= link_to image_tag('22_64x64.png', :width => '24px', :align => 'absmiddle') + " My Profile", :root %>
 		<%= link_to image_tag('18_64x64.png', :width => '24px', :align => 'absmiddle') + " Record Mileage", new_mileage_record_path %> | 
-		<%= link_to "Sign Out", destroy_user_session_path, method: :delete %> | 
+		<%= link_to "Sign Out", destroy_subcontractor_session_path, method: :delete %> | 
 	<%- else %>
-		<%= link_to "Sign Up", new_user_registration_path %> | 
-		<%= link_to "Sign In", new_user_session_path %> | 
+		<%= link_to "Sign Up", new_subcontractor_registration_path %> | 
+		<%= link_to "Sign In", new_subcontractor_session_path %> | 
 		<%= link_to "Create Client", new_client_path %> 
 	<%- end %></div>
 	<header><h1>Mileage Tracker</h1></header>

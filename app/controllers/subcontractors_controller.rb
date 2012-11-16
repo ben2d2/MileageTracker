@@ -3,23 +3,18 @@ class SubcontractorsController < ApplicationController
   before_filter :lookup_subcontractor
 
 	def index
-    if user_signed_in?
-  		@subcontractor = Subcontractor.where(:user_id => current_user)
+    if subcontractor_signed_in?
+  		@subcontractor = Subcontractor.find(current_subcontractor)
     else
       "Please sign in!"
     end
 	end	
 
   def show
-    @subcontractor = Subcontractor.find(current_user)
+    @subcontractor = Subcontractor.find(current_subcontractor)
   end 
 
-	def new
-		@subcontractor = Subcontractor.new
-	end
-
 	def create
-    @subcontractor.user = current_user
 		if @subcontractor.save
       flash[:notice] = "Welcome! You have signed up successfully."
       render :show

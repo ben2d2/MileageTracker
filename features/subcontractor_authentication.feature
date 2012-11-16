@@ -1,7 +1,7 @@
 Feature: Subcontractor authentication
 
   Scenario: Signing in
-    Given there is a user "ben@example.com" with password "foobar"
+    Given there is a subcontractor "ben@example.com" with password "foobar"
     When I go to the homepage
     And I click "Sign In"
     And I fill in "ben@example.com" for "Email"
@@ -11,7 +11,7 @@ Feature: Subcontractor authentication
 
 
   Scenario: Signing in with incorrect password
-    Given there is a user "ben@example.com" with password "notfoobar"
+    Given there is a subcontractor "ben@example.com" with password "notfoobar"
     When I go to the homepage
     And I click "Sign In"
     And I fill in "ben@example.com" for "Email"
@@ -22,7 +22,7 @@ Feature: Subcontractor authentication
 
 
   Scenario: Logging out
-    Given there is a user "ben@example.com" with password "foobar"
+    Given there is a subcontractor "ben@example.com" with password "foobar"
     When I go to the homepage
     And I click "Sign In"
     And I fill in "ben@example.com" for "Email"
@@ -34,15 +34,15 @@ Feature: Subcontractor authentication
     Then I should see "Signed out successfully."
 
 
-  Scenario: Signed out users see appropriate links
+  Scenario: Signed out subcontractors see appropriate links
     Given I am on the homepage
     Then I should see "Sign In"
     And I should see "Sign Up"
     And I should not see "Sign Out"
 
 
-  Scenario: Signed in users see appropriate links
-    Given there is a user "ben@example.com" with password "foobar"
+  Scenario: Signed in subcontractors see appropriate links
+    Given there is a subcontractor "ben@example.com" with password "foobar"
     When I go to the homepage
     And I click "Sign In"
     And I fill in "ben@example.com" for "Email"

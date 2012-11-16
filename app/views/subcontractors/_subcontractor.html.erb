@@ -1,6 +1,6 @@
-<%- if user_signed_in? %>
+<%- if subcontractor_signed_in? %>
 <h2><%= subcontractor.first_name %> <%= subcontractor.last_name %></h2>
-<p><%= subcontractor.user.email %></p>
+<p><%= subcontractor.email %></p>
 <p><%= subcontractor.phone %></p>
 <h5>Mileage Records</h5>
 <table><tr><th>Date</th><th>Client ID</th><th>Miles</th></tr>
