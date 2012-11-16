@@ -22,18 +22,17 @@ Then /^the "(.*?)" field should contain "(.*?)"$/ do |field_name, text|
   step %{I should see "#{text}" in the "#{field_name}" field}
 end
 
-
-# Then /^I should see "(.*?)"  in the "(.*?)" field$/ do |field_name, text|
-#   step %{I should see "#{text}" in the "#{field_name}" field}
-# end
+When /^I select "(.*?)" from "(.*?)"$/ do |value, field|
+  select(value, from: field)
+end
 
 Then /^I should see "(.*?)" in the "(.*?)" field$/ do |text, field_name|
   field = find_field(field_name)
-  # Rails adds a line break to beginning of textarea tags
-  # https://github.com/rails/rails/issues/393
-  # Capybara does not remove the line break
-  # https://github.com/jnicklas/capybara/issues/677
-  # We are fixing it locally by removing the first character
-  field_value = (field.tag_name == 'textarea') ? field.text[1..-1] || "" : field.value
-  field_value.should == text
+  field_value = (field.tag_name == 'textarea') ? field.text : field.value
+  (field_value || "").should == text
 end
+
+Then /^"([^"]*)" should be selected for "([^"]*)"$/ do |value, field|
+    id = page.find_field(field)["id"]
+    page.should have_xpath "//select[@id = '#{id}']/option[text() = \"#{value}\" and @selected]"
+  end

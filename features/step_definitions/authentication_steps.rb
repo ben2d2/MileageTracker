@@ -18,11 +18,12 @@ end
 
 def sign_in_as user
   steps %Q{
-    Given I am on the homepage
-    When I click "Sign In"
-    And I fill in "#{subcontractor.user.email}" for "Email"
-    And I fill in "password" for "Password"
+    Given there is a user "ben@example.com" with password "foobar"
+    When I go to the homepage
+    And I click "Sign In"
+    And I fill in "ben@example.com" for "Email"
+    And I fill in "foobar" for "Password"
     And I click "Sign in"
-    Then I should see "You are now signed in."
+    Then I should see "Signed in successfully."
   }
 end
