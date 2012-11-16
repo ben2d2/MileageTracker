@@ -6,7 +6,6 @@ class SubcontractorsController < ApplicationController
     if subcontractor_signed_in?
       @subcontractor = Subcontractor.find(current_subcontractor)
     else
-  		@subcontractor = Subcontractor.all
     end
 	end	
 

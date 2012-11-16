@@ -11,9 +11,18 @@
  *= require_self
  *= require_tree .
  */
+.notice {
+margin:0px;
+background-color: #f5d671;
+padding: 10px;
+}
 body {
 	font-family: 'Montserrat', sans-serif;	margin: 0px;
 	color: #333333;
+	width: 70%;
+	margin-left:auto;
+	margin-right:auto;
+	background-color: #cccccc
 }
 
 header {
@@ -44,7 +53,7 @@ h4 {
 }
 h5 {
 	height:15px;
-	background-color: #333333;
+	background-color: #336699;
 	margin: 0px;
 	padding: 10px;
 	color: #fff;
@@ -60,10 +69,10 @@ form {
 }
 
 #nav {
-	height: 20px;
+	height: 15px;
 	padding: 10px;
 	background-color: #333333;
-	text-align: left;
+	text-align: right;
 	font-size: 14px;
 	line-height: 15px;
 }
@@ -95,33 +104,32 @@ a:hover{
 
 table {
 width:100%;
-margin: 5px;
-
+margin-top: 5px;
 }
 
 th {
-	width:32%;
+	width:31%;
 	height:20px;
 	padding: 5px;
 	border: solid 1px #333;
-	float: left;
 	background-color: #cccccc;
+	margin:0px;
 }
 td {
-	width:32%;
+	width:31%;
 	height:20px;
 	padding: 5px;
 	border: solid 1px #333;
-	float: left;
+	margin:0px;
 }
 
 footer {
-	height:10px;
-	background-color: #336699;
+	height:15px;
+	background-color: #333333;
 	margin: 0px;
 	padding: 10px;
 	color: #fff;
 	font-size: 10px;
-	line-height: 10px;
+	line-height: 15px;
 
 }

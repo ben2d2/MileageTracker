@@ -8,20 +8,17 @@
 <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 </head>
 <body>
+		<header><h1>Mileage Tracker</h1></header>
 		<div id="nav"><%- if subcontractor_signed_in? %>
-		<%= link_to image_tag('22_64x64.png', :width => '24px', :align => 'absmiddle') + " My Profile", :root %> | 
-		<%= link_to image_tag('18_64x64.png', :width => '24px', :align => 'absmiddle') + " Record Mileage", new_mileage_record_path %> | 
+		<%= link_to " My Profile", :root %> | 
+		<%= link_to " Record Mileage", new_mileage_record_path %> | 
 		<%= link_to "Sign Out", destroy_subcontractor_session_path, method: :delete %> | 
-		<%= link_to "All Subcontractors", subcontractors_path %> 
 <%- else %>
 		<%= link_to "Sign Up", new_subcontractor_registration_path %> | 
 		<%= link_to "Sign In", new_subcontractor_session_path %> | 
-		<%= link_to "Create Client", new_client_path %> | 
-		<%= link_to "All Clients", clients_path %> 
 	<%- end %></div>
-	<header><h1>Mileage Tracker</h1></header>
 	<%- flash.each do |type, message| %>
-	  <p>There was a <%= type %> for you. <%= message %></p>
+	  <div class="notice">There was a <%= type %> for you. <%= message %></div>
 	<%- end %>
 <section><%= yield %></section>
 <footer>Copyright © 2012 Ben Bridges</footer>
