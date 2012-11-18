@@ -11,33 +11,36 @@
  *= require_self
  *= require_tree .
  */
+@import url(http://fonts.googleapis.com/css?family=Sanchez);
 .notice {
 margin:0px;
 background-color: #f5d671;
 padding: 10px;
 }
 body {
-	font-family: 'Montserrat', sans-serif;	margin: 0px;
+	font-family: 'Sanchez', serif;	margin: 0px;
 	color: #333333;
-	width: 70%;
+	width: 100%;
 	margin-left:auto;
 	margin-right:auto;
-	background-color: #cccccc
+	background-color: #fff;
 }
 
 header {
-	height:60px;
-	background-color: #336699;
+	height:100px;
+	background-color: #ffffff;
 	margin: 0px;
 	padding: 5px;
 	color: #fff;
 
 }
 section {
-	background-color: #ffffff;
+	background-color: #594018;
 	margin: 0px;
 	padding: 5px;
-	color: #333;
+	color: #fff;
+	border-top: 10px solid #faac38;
+	border-bottom: 10px solid #faac38;
 }
 h1 {
 	margin: 10px;
@@ -53,16 +56,18 @@ h4 {
 }
 h5 {
 	height:15px;
-	background-color: #336699;
+	background-color: #896224;
 	margin: 0px;
 	padding: 10px;
 	color: #fff;
-	font-size: 14px;
-	line-height: 16px;
+	font-size: 17px;
+	line-height: 17px;
 }
 p {
 	margin: 10px;
 	padding: 5px;
+	font-size: 17px;
+
 }
 form {
 	margin: 10px;
@@ -71,18 +76,19 @@ form {
 #nav {
 	height: 15px;
 	padding: 10px;
-	background-color: #333333;
+	background-color: #fff;
 	text-align: right;
 	font-size: 14px;
 	line-height: 15px;
+	margin-top: -35px;
 }
 
 #nav a:link{
-	color: #ffffff;
+	color: #333;
 	text-decoration: none;
 }
 #nav a:visited{
-	color: #ffffff;
+	color: #333;
 	text-decoration: none;
 
 }
@@ -112,7 +118,8 @@ th {
 	height:20px;
 	padding: 5px;
 	border: solid 1px #333;
-	background-color: #cccccc;
+	background-color: #d5c0ad;
+	color: #333;
 	margin:0px;
 }
 td {
@@ -121,14 +128,16 @@ td {
 	padding: 5px;
 	border: solid 1px #333;
 	margin:0px;
+	background-color: #ffffff;
+	color: #333;
 }
 
 footer {
 	height:15px;
-	background-color: #333333;
+	background-color: #fff;
 	margin: 0px;
 	padding: 10px;
-	color: #fff;
+	color: #333;
 	font-size: 10px;
 	line-height: 15px;
 

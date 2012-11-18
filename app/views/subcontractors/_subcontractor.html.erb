@@ -1,7 +1,9 @@
 <%- if subcontractor_signed_in? %>
-<h2><%= subcontractor.first_name %> <%= subcontractor.last_name %></h2>
-<p><%= subcontractor.email %></p>
-<p><%= subcontractor.phone %></p>
+<div id="subcontractor">
+	<p><%= subcontractor.first_name %> <%= subcontractor.last_name %></p>
+	<p><%= subcontractor.email %></p>
+	<p><%= subcontractor.phone %></p>
+</div>
 <h5>Mileage Records</h5>
 <table><tr><th>Date</th>
 	<%- if current_page?('/') %>
