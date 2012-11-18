@@ -5,10 +5,18 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script>
+    $(function() {
+        $( "#mileage_record_date" ).datepicker();
+    });
+    </script>
 </head>
 <body>
-		<header><h1>Mileage Tracker</h1></header>
+		<header><%= image_tag ('logo.png'), height: '100px' %></header>
 		<div id="nav"><%- if subcontractor_signed_in? %>
 		<%= link_to " My Profile", :root %> | 
 		<%= link_to " Record Mileage", new_mileage_record_path %> | 
