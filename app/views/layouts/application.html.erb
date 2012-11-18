@@ -24,6 +24,7 @@
 <%- else %>
 		<%= link_to "Sign Up", new_subcontractor_registration_path %> | 
 		<%= link_to "Sign In", new_subcontractor_session_path %> | 
+		<%= link_to "Admin Sign In", new_admin_user_session_path %> | 
 	<%- end %></div>
 	<%- flash.each do |type, message| %>
 	  <div class="notice">There was a <%= type %> for you. <%= message %></div>
