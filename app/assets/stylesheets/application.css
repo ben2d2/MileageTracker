@@ -69,9 +69,23 @@ p {
 	font-size: 17px;
 
 }
+
 form {
 	margin: 10px;
+	font-size: 15px;
+	padding: 10px;
 }
+select {
+	font-size: 15px;
+	margin: 10px
+}
+input {
+	font-size: 15px;
+	margin: 10px
+}
+button {
+	font-size: 15px;
+margin: 10px}
 
 #nav {
 	height: 15px;
@@ -80,22 +94,31 @@ form {
 	text-align: right;
 	font-size: 14px;
 	line-height: 15px;
-	margin-top: -35px;
+	margin-top: -95px;
+	margin-bottom: 70px;
+	float: right;
+	width: 270px;
+}
+#nav_button {
+margin-left: 20px;
+float: left;
+text-align: center;
 }
 
 #nav a:link{
 	color: #333;
 	text-decoration: none;
+	font-size: 11px;
 }
 #nav a:visited{
 	color: #333;
 	text-decoration: none;
-
+	font-size: 11px;
 }
 #nav a:hover{
-	color: #336699;
+	color: #faac38;
 	text-decoration: underline;
-
+	font-size: 11px;
 }
 
 a:link{
@@ -105,7 +128,21 @@ a:visited{
 	color: #333333;
 }
 a:hover{
-	color: #336699;
+	color: #faac38;
+}
+
+a.shared:link{
+	color: #ffffff;
+	margin-left: 30px;
+}
+a.shared:visited{
+	color: #ffffff;
+	margin-left: 30px;
+
+}
+a.shared:hover{
+	color: #faac38;
+	margin-left: 30px;
 }
 
 table {

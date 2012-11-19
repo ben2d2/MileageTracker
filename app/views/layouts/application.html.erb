@@ -9,22 +9,32 @@
     <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
     <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="/resources/demos/style.css" />
+
     <script>
     $(function() {
         $( "#mileage_record_date" ).datepicker();
+        $( "#anim" ).change(function() {
+            $( "#mileage_record_date" ).datepicker( "slide", "showAnim", $( this ).val() );
+        });
     });
     </script>
 </head>
 <body>
 		<header><%= image_tag ('logo.png'), height: '100px' %></header>
 		<div id="nav"><%- if subcontractor_signed_in? %>
-		<%= link_to " My Profile", :root %> | 
-		<%= link_to " Record Mileage", new_mileage_record_path %> | 
-		<%= link_to "Sign Out", destroy_subcontractor_session_path, method: :delete %> | 
+		<div id="nav_button"><%= link_to image_tag('profile.png'), :root, :alt => 'My Profile' %>
+      <br><%= link_to 'My Profile', :root %></div>
+		<div id="nav_button"><%= link_to image_tag('mileage.png'), new_mileage_record_path, :alt => 'Record Mileage'  %>
+      <br><%= link_to 'Record Mileage', new_mileage_record_path %></div>
+		<div id="nav_button"><%= link_to image_tag('sign.png'), destroy_subcontractor_session_path, method: :delete, :alt => 'Sign Out'  %>
+      <br><%= link_to 'Sign Out', destroy_subcontractor_session_path, method: :delete %></div>
 <%- else %>
-		<%= link_to "Sign Up", new_subcontractor_registration_path %> | 
-		<%= link_to "Sign In", new_subcontractor_session_path %> | 
-		<%= link_to "Admin Sign In", new_admin_user_session_path %> | 
+		<div id="nav_button"><%= link_to image_tag('sign.png'), new_subcontractor_session_path, :alt => 'Sign In'  %>
+      <br><%= link_to 'Sign In', new_subcontractor_session_path %></div>
+    <div id="nav_button"><%= link_to image_tag('sign_up copy.png'), new_subcontractor_registration_path, :alt => 'Sign Up'  %>
+      <br><%= link_to 'Sign Up', new_subcontractor_registration_path %></div>
+    <div id="nav_button"><%= link_to image_tag('key.png'), new_admin_user_session_path, :alt => 'Admin'  %>
+      <br><%= link_to 'Admin', new_admin_user_session_path %></div>
 	<%- end %></div>
 	<%- flash.each do |type, message| %>
 	  <div class="notice">There was a <%= type %> for you. <%= message %></div>
