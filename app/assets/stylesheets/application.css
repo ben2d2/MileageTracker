@@ -179,3 +179,12 @@ footer {
 	line-height: 15px;
 
 }
+.landing_image_wrapper {
+height: 400px;
+overflow: hidden;
+}
+.landing_image {
+	width: 1400px;
+margin-top: -400px;
+overflow: hidden;
+}
