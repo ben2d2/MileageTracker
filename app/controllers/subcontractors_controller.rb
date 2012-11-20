@@ -22,6 +22,15 @@ class SubcontractorsController < ApplicationController
       render :new
     end
 	end
+
+  def update
+    if @subcontractor.update_attributes(params[:subcontractor])
+      redirect_to @subcontractor
+    else
+      flash[:error] = @subcontractor.errors.full_messages.join
+      render :edit
+    end
+  end
   
   protected
 
