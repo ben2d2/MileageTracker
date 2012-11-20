@@ -1,0 +1,7 @@
+<tr><td><%= mileage_record.date %></td>
+<%- if current_page?('/') %>
+	<td><%= mileage_record.client.name %></td>
+<%- else %>
+	<td><%= mileage_record.subcontractor.first_name %> <%= mileage_record.subcontractor.last_name %></td>
+<%- end %>
+</td><td><%= mileage_record.miles %></td></tr>
