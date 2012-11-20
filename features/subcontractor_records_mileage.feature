@@ -8,7 +8,8 @@ Feature: Subcontractor records mileage
   * Record must not be publicly visible once saved
 
   Background:
-    Given I am signed in
+    Given I am signed in as a subcontractor
+    Then I should see "Signed in successfully."
     And I am on the homepage
     Given the following clients:
       | name      |

@@ -15,10 +15,10 @@ Background:
     And I fill in "password" for "Password"
     And I click "Login"
     Then I should see "Signed in successfully."
-
-  Scenario: Happy Path
     And I click "Clients"
     And I click "New Client"
+
+  Scenario: Happy Path
     When I fill in "Jeff City" for "Name"
     And I fill in "Joe Smith" for "Contact"
     And I fill in "joe@example.com" for "Email"
@@ -31,8 +31,6 @@ Background:
     And I should see "555-555-5555"
 
   Scenario: Admin attempts to skip email
-    And I click "Clients"
-    And I click "New Client"
     When I fill in "" for "Email"
     And I fill in "Jeff City" for "Name"
     And I fill in "Joe Smith" for "Contact"
@@ -45,8 +43,6 @@ Background:
     And I should see "555-555-5555" in the "Phone" field
 
   Scenario: Admin attempts to skip name
-    And I click "Clients"
-    And I click "New Client"
     When I fill in "joe@example.com" for "Email"
     And I fill in "" for "Name"
     And I fill in "Joe Smith" for "Contact"
@@ -59,10 +55,8 @@ Background:
     And I should see "555-555-5555" in the "Phone" field
 
 
-  @wip
+
   Scenario: Admin attempts to skip contact
-    And I click "Clients"
-    And I click "New Client"
     When I fill in "joe@example.com" for "Email"
     And I fill in "Jeff City" for "Name"
     And I fill in "" for "Contact"
@@ -75,10 +69,7 @@ Background:
     And I should see "555-555-5555" in the "Phone" field
 
 
- @wip
   Scenario: Admin attempts to skip phone
-    And I click "Clients"
-    And I click "New Client"
     When I fill in "joe@example.com" for "Email"
     And I fill in "Jeff City" for "Name"
     And I fill in "Joe Smith" for "Contact"

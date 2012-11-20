@@ -12,15 +12,15 @@ end
 
 Given /^I am signed in as "(.*?)"$/ do |email|
   @subcontractor = Fabricate(:subcontractor, email: email)
-  sign_in_as @subcontractor
+  sign_in_as_subcontractor @subcontractor
 end
 
-Given /^I am signed in$/ do
+Given /^I am signed in as a subcontractor$/ do
   @subcontractor = Fabricate(:subcontractor)
-  sign_in_as @subcontractor
+  sign_in_as_subcontractor @subcontractor
 end
 
-def sign_in_as subcontractor
+def sign_in_as_subcontractor subcontractor
   steps %Q{
     Given there is a subcontractor "ben@example.com" with password "foobar"
     When I go to the homepage
