@@ -8,7 +8,7 @@ MileageTracker::Application.routes.draw do
   
   root :to => 'subcontractors#index'
 
-  resources :subcontractors, only: [:index, :new, :create, :show]
+  resources :subcontractors, except: [:destroy]
 
   resources :clients, only: [:index, :new, :create, :show]
 

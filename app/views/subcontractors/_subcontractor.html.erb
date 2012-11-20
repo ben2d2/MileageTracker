@@ -1,5 +1,6 @@
 <%- if subcontractor_signed_in? %>
 <div id="subcontractor">
+	<p><%= link_to "Edit My Profile", edit_subcontractor_path(@subcontractor) %></p>
 	<p><%= subcontractor.first_name %> <%= subcontractor.last_name %></p>
 	<p><%= subcontractor.email %></p>
 	<p><%= subcontractor.phone %></p>
