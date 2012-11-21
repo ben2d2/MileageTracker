@@ -22,24 +22,40 @@
 <body>
 		<header><%= image_tag ('logo.png'), height: '100px' %></header>
 		<div id="nav"><%- if subcontractor_signed_in? %>
-		<div id="nav_button"><%= link_to image_tag('profile.png'), :root, :alt => 'My Profile' %>
+
+    <div id="nav_button"><%= link_to image_tag('job_log.png'), new_mileage_record_path, :alt => 'Job Log'  %>
+      <br><%= link_to 'Log Time & Miles', new_mileage_record_path %></div>
+
+		<div id="nav_button"><%= link_to image_tag('user_search.png'), :root, :alt => 'My Profile' %>
       <br><%= link_to 'My Profile', :root %></div>
-		<div id="nav_button"><%= link_to image_tag('mileage.png'), new_mileage_record_path, :alt => 'Record Mileage'  %>
-      <br><%= link_to 'Record Mileage', new_mileage_record_path %></div>
-		<div id="nav_button"><%= link_to image_tag('sign.png'), destroy_subcontractor_session_path, method: :delete, :alt => 'Sign Out'  %>
+      <%- if current_page?('/') %>
+    <div id="nav_button"><%= link_to image_tag('user_edit.png'), edit_subcontractor_path(@subcontractor), :alt => 'Edit My Profile' %>
+      <br><%= link_to 'Edit My Profile', edit_subcontractor_path(@subcontractor) %></div>
+<%- end %>
+		<div id="nav_button"><%= link_to image_tag('logout.png'), destroy_subcontractor_session_path, method: :delete, :alt => 'Sign Out'  %>
       <br><%= link_to 'Sign Out', destroy_subcontractor_session_path, method: :delete %></div>
+
 <%- else %>
-		<div id="nav_button"><%= link_to image_tag('sign.png'), new_subcontractor_session_path, :alt => 'Sign In'  %>
+
+		<div id="nav_button"><%= link_to image_tag('login.png'), new_subcontractor_session_path, :alt => 'Sign In'  %>
       <br><%= link_to 'Sign In', new_subcontractor_session_path %></div>
-    <div id="nav_button"><%= link_to image_tag('sign_up copy.png'), new_subcontractor_registration_path, :alt => 'Sign Up'  %>
+
+    <div id="nav_button"><%= link_to image_tag('user_add.png'), new_subcontractor_registration_path, :alt => 'Sign Up'  %>
       <br><%= link_to 'Sign Up', new_subcontractor_registration_path %></div>
+
     <div id="nav_button"><%= link_to image_tag('key.png'), new_admin_user_session_path, :alt => 'Admin'  %>
       <br><%= link_to 'Admin', new_admin_user_session_path %></div>
+
 	<%- end %></div>
 	<%- flash.each do |type, message| %>
 	  <div class="notice">There was a <%= type %> for you. <%= message %></div>
 	<%- end %>
-<section><%= yield %></section>
+
+  <div id="section_border"></div>
+    
+    <section><%= yield %></section>
+  
+  <div id="section_border"></div>
 <footer>Copyright © 2012 Ben Bridges</footer>
 </body>
 </html>

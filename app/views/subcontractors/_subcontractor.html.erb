@@ -1,6 +1,5 @@
 <%- if subcontractor_signed_in? %>
 <div id="subcontractor">
-	<p><%= link_to "Edit My Profile", edit_subcontractor_path(@subcontractor) %></p>
 	<p><%= subcontractor.first_name %> <%= subcontractor.last_name %></p>
 	<p><%= subcontractor.email %></p>
 	<p><%= subcontractor.phone %></p>
@@ -16,5 +15,6 @@
 	<th style="text-align:center">Hours</th></tr>
 <%= render subcontractor.mileage_records %></table>
 <%- else %>
+<div class="notice">"Remebering how to do things correctly is difficult,but we never forget our mistakes", Unknown</div>
 <div class='landing_image_wrapper'><%= image_tag ('nutrition.jpg'), :class => 'landing_image' %></div>
 <%- end %>
