@@ -4,8 +4,8 @@ class MileageRecord < ActiveRecord::Base
 
 	belongs_to :subcontractor, class_name: Subcontractor
 
-	validates_presence_of :client_id, :date, :miles, :subcontractor_id
+	validates_presence_of :client_id, :date, :miles, :subcontractor_id, :hours
 
-  attr_accessible :client_id, :date, :miles, :subcontractor_id
+  attr_accessible :client_id, :date, :miles, :subcontractor_id, :hours
 
 end
