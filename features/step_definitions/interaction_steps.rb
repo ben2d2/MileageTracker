@@ -36,3 +36,9 @@ Then /^"([^"]*)" should be selected for "([^"]*)"$/ do |value, field|
     id = page.find_field(field)["id"]
     page.should have_xpath "//select[@id = '#{id}']/option[text() = \"#{value}\" and @selected]"
   end
+
+  Then /^I should see the following table:$/ do |table|
+  """| date       | client    | miles | hours |
+    | 11/12/2012 | Jeff City | 45    | 8.7   |
+    | 11/15/2012 | Maryville | 80    | 9.3   |"""
+end

@@ -1,5 +1,5 @@
 Feature: Subcontractor authentication
-
+@wip
   Scenario: Signing in
     Given there is a subcontractor "ben@example.com" with password "foobar"
     When I go to the homepage
@@ -8,6 +8,10 @@ Feature: Subcontractor authentication
     And I fill in "foobar" for "Password"
     And I click "Sign in"
     Then I should see "Signed in successfully."
+    And I should see the following table:
+    | date       | client    | miles | hours |
+    | 11/12/2012 | Jeff City | 45    | 8.7   |
+    | 11/15/2012 | Maryville | 80    | 9.3   |
 
 
   Scenario: Signing in with incorrect password

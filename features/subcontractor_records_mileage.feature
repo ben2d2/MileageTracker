@@ -18,7 +18,6 @@ Feature: Subcontractor records mileage
     And I click "Log Time & Miles"
     Then I should see "Record your mileage here"
 
-
   Scenario: Happy Path
     When I fill in "2012-11-12" for "Date"
     And I select "Jeff City" from "Client"
