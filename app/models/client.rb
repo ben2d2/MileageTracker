@@ -1,6 +1,6 @@
 class Client < ActiveRecord::Base
 	
-	has_many :mileage_records
+	has_many :job_logs
 
 	validates_presence_of :email, :name, :contact, :phone
 	

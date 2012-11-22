@@ -1,4 +1,4 @@
 require 'spec_helper'
 
-describe "mileage_records/index.html.erb" do
+describe "job_logs/index.html.erb" do
 end

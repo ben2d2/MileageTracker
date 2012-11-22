@@ -1,0 +1,10 @@
+<tr>
+	<td><%= job_log.date %></td>
+<%- if current_page?('/') %>
+	<td><%= job_log.client.name %></td>
+<%- else %>
+	<td><%= job_log.subcontractor.first_name %> <%= job_log.subcontractor.last_name %></td>
+<%- end %>
+<td style="text-align:center"><%= job_log.miles %> @ .55 cents = $<%- total_miles = job_log.miles.to_f*55/100 %><%= total_miles.round %></td>
+<td style="text-align:center"><%= job_log.hours %> @ $30.00 = $<%- total_hours = job_log.hours.to_f*30 %><%= total_hours.round %></td>
+</tr>

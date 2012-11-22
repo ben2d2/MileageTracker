@@ -4,7 +4,7 @@
 	<p><%= subcontractor.email %></p>
 	<p><%= subcontractor.phone %></p>
 </div>
-<h5>Mileage Records</h5>
+<h5>Job Logs</h5>
 <table><tr><th>Date</th>
 	<%- if current_page?('/') %>
 		<th>Client</th>
@@ -13,7 +13,7 @@
 	<%- end %>
 	<th style="text-align:center">Miles</th>
 	<th style="text-align:center">Hours</th></tr>
-<%= render subcontractor.mileage_records %></table>
+<%= render subcontractor.job_logs %></table>
 <%- else %>
 <div class="notice">"Remebering how to do things correctly is difficult,but we never forget our mistakes", Unknown</div>
 <div class='landing_image_wrapper'><%= image_tag ('nutrition.jpg'), :class => 'landing_image' %></div>

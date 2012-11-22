@@ -12,9 +12,9 @@
 
     <script>
     $(function() {
-        $( "#mileage_record_date" ).datepicker();
+        $( "#job_log_date" ).datepicker();
         $( "#anim" ).change(function() {
-            $( "#mileage_record_date" ).datepicker( "slide", "showAnim", $( this ).val() );
+            $( "#job_log_date" ).datepicker( "slide", "showAnim", $( this ).val() );
         });
     });
     </script>
@@ -23,8 +23,8 @@
 		<header><%= image_tag ('logo.png'), height: '100px' %></header>
 		<div id="nav"><%- if subcontractor_signed_in? %>
 
-    <div id="nav_button"><%= link_to image_tag('job_log.png'), new_mileage_record_path, :alt => 'Job Log'  %>
-      <br><%= link_to 'Log Time & Miles', new_mileage_record_path %></div>
+    <div id="nav_button"><%= link_to image_tag('job_log.png'), new_job_log_path, :alt => 'Job Log'  %>
+      <br><%= link_to 'Log Time & Miles', new_job_log_path %></div>
 
 		<div id="nav_button"><%= link_to image_tag('user_search.png'), :root, :alt => 'My Profile' %>
       <br><%= link_to 'My Profile', :root %></div>

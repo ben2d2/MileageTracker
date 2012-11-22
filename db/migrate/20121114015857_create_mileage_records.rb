@@ -1,6 +1,6 @@
-class CreateMileageRecords < ActiveRecord::Migration
+class CreateJobLogs < ActiveRecord::Migration
   def change
-    create_table :mileage_records do |t|
+    create_table :job_logs do |t|
       t.integer :subcontractor_id
       t.integer :client_id
       t.string :date

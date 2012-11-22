@@ -1,5 +1,5 @@
-class AddHoursToMileageRecords < ActiveRecord::Migration
+class AddHoursToJobLogs < ActiveRecord::Migration
   def change
-    add_column :mileage_records, :hours, :string
+    add_column :job_logs, :hours, :string
   end
 end

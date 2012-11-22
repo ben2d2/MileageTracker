@@ -1,4 +1,4 @@
-ActiveAdmin.register MileageRecord do
+ActiveAdmin.register JobLog do
    index do
   	column :id
   	column :date
