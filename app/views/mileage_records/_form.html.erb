@@ -1,8 +1,0 @@
-<%= simple_form_for @mileage_record do |f| %>
-  <p><%= f.input :date, :input_html => { :size => 20, :maxlength => 20 }  %></p>
-  <p><%= f.input :client_id, collection: Client.all, :prompt => "Select a client" %></p>
-  <p><%= f.hidden_field :subcontractor_id, :value => current_subcontractor.id %></p>
-  <p><%= f.input :miles, :input_html => { :size => 20, :maxlength => 20 } %></p>
-  <p><%= f.input :hours, :input_html => { :size => 20, :maxlength => 20 } %></p>
-  <p><%= f.submit 'Create Job Log' %></p>
-<%- end %>
