@@ -8,7 +8,7 @@ class JobLogsController < ApplicationController
 
   def create
 		if @job_log.save
-      flash[:notice] = "Your mileage was recorded successfully!"
+      flash[:notice] = "Your mileage and time were recorded successfully!"
       redirect_to :root
     else
       flash[:error] = "Your mileage couldn't be saved. #{@job_log.errors.full_messages.join}"

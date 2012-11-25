@@ -16,7 +16,7 @@ Feature: Subcontractor records mileage
       | Jeff City |
       | Knox South|
     And I click "Log Time & Miles"
-    Then I should see "Record your mileage here"
+    Then I should see "Record your mileage and time here"
 
   Scenario: Happy Path
     When I fill in "2012-11-12" for "Date"
@@ -24,7 +24,7 @@ Feature: Subcontractor records mileage
     And I fill in "45" for "Miles"
     And I fill in "8.7" for "Hours"
     And I press "Create Job Log"
-    Then I should see "Your mileage was recorded successfully!"
+    Then I should see "Your mileage and time were recorded successfully!"
 
   Scenario: Subcontractor attempts to skip date
     When I fill in "" for "Date"
