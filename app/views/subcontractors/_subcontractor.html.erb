@@ -1,28 +1,37 @@
 <%- if subcontractor_signed_in? %>
-<div id="subcontractor">
-	<p><%= subcontractor.first_name %> <%= subcontractor.last_name %></p>
-	<p><%= subcontractor.email %></p>
-	<p><%= subcontractor.phone %></p>
+<div id="subcontractor_info">
+	<div class="subcontractor_column">
+		<p><%= subcontractor.first_name %> <%= subcontractor.last_name %></p>
+		<p><%= subcontractor.email %></p>
+		<p><%= subcontractor.phone %></p>
+	</div>
+	<div class="subcontractor_rates">
+		<h6>Client Rates</h6>
+		<table>
+			<tr>
+			<th>Client</th>
+			<th style="text-align:center">Miles Rate</th>
+			<th style="text-align:center">Labor Rate</th>
+		</tr>
+		<%= render subcontractor.rates %>
+		</table>
+	</div>
 </div>
-<h5>Job Logs</h5>
-<table>
-<tr>
-	<th>Date</th>
-	<th>Client</th>
-	<th style="text-align:center">Miles</th>
-	<th style="text-align:center">Total Mileage Rate</th>
-	<th style="text-align:center">Hours</th>
-	<th style="text-align:center">Total Labor Rate</th>
-</tr>
-<%= render subcontractor.job_logs %>
-</table>
-<table>
-
-<%= render subcontractor.rates %>
-</table>
-
-
+<div id="job_logs">
+	<h5>Job Logs</h5>
+	<table>
+		<tr>
+			<th>Date</th>
+			<th>Client</th>
+			<th style="text-align:center">Miles</th>
+			<th style="text-align:center">Total Mileage Rate</th>
+			<th style="text-align:center">Hours</th>
+			<th style="text-align:center">Total Labor Rate</th>
+		</tr>
+		<%= render subcontractor.job_logs %>
+	</table>
+</div>
 <%- else %>
-<div class="notice">"Remebering how to do things correctly is difficult,but we never forget our mistakes", Unknown</div>
-<div class='landing_image_wrapper'><%= image_tag ('nutrition.jpg'), :class => 'landing_image' %></div>
+	<div class="notice">"Remebering how to do things correctly is difficult,but we never forget our mistakes", Unknown</div>
+	<div class='landing_image_wrapper'><%= image_tag ('nutrition.jpg'), :class => 'landing_image' %></div>
 <%- end %>

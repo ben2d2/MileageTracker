@@ -1,5 +1,5 @@
 <tr>
 	<td><%= rate.client.name %></td>
-	<td style="text-align:center"><%= rate.miles_rate %></td>
-	<td style="text-align:center"><%= rate.labor_rate %></td>
+	<td style="text-align:center"><%= number_to_currency(rate.miles_rate) %></td>
+	<td style="text-align:center"><%= number_to_currency(rate.labor_rate) %></td>
 </tr>
