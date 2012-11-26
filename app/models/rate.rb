@@ -6,4 +6,6 @@ class Rate < ActiveRecord::Base
   attr_accessible :client_id, :labor_rate, :miles_rate, :subcontractor_id
 
   validates_presence_of :client_id, :labor_rate, :miles_rate, :subcontractor_id
+
+  validates_uniqueness_of :client_id, :scope => [:subcontractor_id]
 end
