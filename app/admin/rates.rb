@@ -1,5 +1,6 @@
 ActiveAdmin.register Rate do
 
+  
   index do
   	column :id
   	column :client_id

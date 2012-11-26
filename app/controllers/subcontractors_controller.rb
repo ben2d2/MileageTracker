@@ -31,6 +31,7 @@ class SubcontractorsController < ApplicationController
       render :edit
     end
   end
+
   
   protected
 
