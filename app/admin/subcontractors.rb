@@ -18,8 +18,10 @@ ActiveAdmin.register Subcontractor do
 	  	row :last_name
 	  	row :email
 	  	row :phone
-
 	  end
+    render 'job_logs/index'
   end
+
+
 
 end
