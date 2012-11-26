@@ -8,7 +8,8 @@ class Subcontractor < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me,:first_name, :last_name, :phone
 
-	has_many :job_logs
+  has_many :job_logs
+  has_many :rates
   # Setup accessible (or protected) attributes for your model
   validates_presence_of :email, :first_name, :last_name, :phone
 

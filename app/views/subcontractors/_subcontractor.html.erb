@@ -5,15 +5,23 @@
 	<p><%= subcontractor.phone %></p>
 </div>
 <h5>Job Logs</h5>
-<table><tr><th>Date</th>
-	<%- if current_page?('/') %>
-		<th>Client</th>
-	<%- else %>
-		<th>Subcontractor</th>
-	<%- end %>
+<table>
+<tr>
+	<th>Date</th>
+	<th>Client</th>
 	<th style="text-align:center">Miles</th>
-	<th style="text-align:center">Hours</th></tr>
-<%= render subcontractor.job_logs %></table>
+	<th style="text-align:center">Total Mileage Rate</th>
+	<th style="text-align:center">Hours</th>
+	<th style="text-align:center">Total Labor Rate</th>
+</tr>
+<%= render subcontractor.job_logs %>
+</table>
+<table>
+
+<%= render subcontractor.rates %>
+</table>
+
+
 <%- else %>
 <div class="notice">"Remebering how to do things correctly is difficult,but we never forget our mistakes", Unknown</div>
 <div class='landing_image_wrapper'><%= image_tag ('nutrition.jpg'), :class => 'landing_image' %></div>

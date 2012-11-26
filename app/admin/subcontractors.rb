@@ -19,7 +19,6 @@ ActiveAdmin.register Subcontractor do
 	  	row :email
 	  	row :phone
 	  end
-    render 'job_logs/index'
   end
 
 
