@@ -7,7 +7,8 @@ ActiveAdmin.register JobLog do
   	column :date
   	column :client_id
   	column :subcontractor_id
-  	column :miles
+    column :miles
+    column :hours
   	default_actions
   end
 
@@ -18,7 +19,8 @@ ActiveAdmin.register JobLog do
 	  	row :date
 	  	row :client_id
 	  	row :subcontractor_id
-	  	row :miles
+      row :miles
+      row :hours
 	  end
 	end
 

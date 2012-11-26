@@ -11,4 +11,9 @@ class Subcontractor < ActiveRecord::Base
 	has_many :job_logs
   # Setup accessible (or protected) attributes for your model
   validates_presence_of :email, :first_name, :last_name, :phone
+
+
+  def display_name
+    "#{first_name} #{last_name}"
+  end
 end
