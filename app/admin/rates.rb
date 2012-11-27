@@ -3,8 +3,12 @@ ActiveAdmin.register Rate do
   
   index do
   	column :id
-  	column :client_id
-  	column :subcontractor_id
+  	column :client_id do |rate|
+          rate.client.name
+        end
+  	column :subcontractor_id do |rate|
+          rate.subcontractor.display_name
+        end
   	column :miles_rate do |rate|
       number_to_currency rate.miles_rate
     end
