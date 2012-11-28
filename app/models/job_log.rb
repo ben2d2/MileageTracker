@@ -13,11 +13,19 @@ class JobLog < ActiveRecord::Base
 
 
   def total_miles_rate
-    @total_miles_rate = Rate.find_by_subcontractor_id_and_client_id(self.subcontractor_id, self.client_id).miles_rate.to_f * self.miles.to_f
+    rate = Rate.find_by_subcontractor_id_and_client_id(self.subcontractor_id, self.client_id)
+    if rate != nil
+      @total_miles_rate = rate.miles_rate.to_f * self.miles.to_f
+    else
+    end
   end
 
   def total_hours_rate
-    @total_hours_rate = Rate.find_by_subcontractor_id_and_client_id(self.subcontractor_id, self.client_id).labor_rate.to_f * self.hours.to_f
+    rate = Rate.find_by_subcontractor_id_and_client_id(self.subcontractor_id, self.client_id)
+    if rate != nil
+      @total_miles_rate = rate.labor_rate.to_f * self.hours.to_f
+    else
+    end
   end
 
 end
