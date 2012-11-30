@@ -7,6 +7,7 @@ MileageTracker is a capstone project application from the Nashville Software Sch
 • Admins create client accounts
 • Admin manages mileage and labor rates per subcontractor/client relationship
 
+Needs better test coverage on ActiveAdmin views and form entries
 
 MileageTracker was authored by: Ben Bridges 615-423-3035 ben2d2@gmail.com
 
