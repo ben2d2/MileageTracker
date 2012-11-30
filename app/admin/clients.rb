@@ -12,7 +12,8 @@ ActiveAdmin.register Client do
   	row :id
   	row :name
   	row :contact
-  	row :email
+    row :email
+    row :phone
   end
 
 panel "Recent Job Logs" do
