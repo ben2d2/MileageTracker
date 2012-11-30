@@ -18,24 +18,21 @@ ActiveAdmin.register Subcontractor do
 	  	row :last_name
 	  	row :email
 	  	row :phone
-      
 	  end
-    panel "Recent Job Logs" do
-            table_for JobLog.where(:subcontractor_id == self.id) do
-                column :id
-                column :date do |job_log|
-                    job_log.date
-                end
-                column :client_id do |job_log|
-                      job_log.client.name
-                    end
-                column :subcontractor_id do |job_log|
-                      job_log.subcontractor.display_name
-                    end
-                column :miles
-                column :hours
-          end
+
+  panel "Recent Job Logs" do
+          table_for subcontractor.job_logs do
+              column :id
+              column :date do |job_log|
+                  job_log.date
+              end
+              column :client_id do |job_log|
+                    job_log.client.name
+                  end
+              column :miles
+              column :hours
         end
+      end
   end
 
 

@@ -11,20 +11,22 @@ class JobLog < ActiveRecord::Base
 
   attr_accessible :client_id, :date, :miles, :subcontractor_id, :hours
 
+  def lookup_rates
+    Rate.find_by_subcontractor_id_and_client_id(self.subcontractor_id, self.client_id)
+  end
+
 
   def total_miles_rate
-    rate = Rate.find_by_subcontractor_id_and_client_id(self.subcontractor_id, self.client_id)
-    if rate != nil
-      @total_miles_rate = rate.miles_rate.to_f * self.miles.to_f
-    else
+    unless lookup_rates == nil
+      @total_miles_rate = lookup_rates.miles_rate.to_f * self.miles.to_f
+      @total_miles_rate.round
     end
   end
 
   def total_hours_rate
-    rate = Rate.find_by_subcontractor_id_and_client_id(self.subcontractor_id, self.client_id)
-    if rate != nil
-      @total_miles_rate = rate.labor_rate.to_f * self.hours.to_f
-    else
+     unless lookup_rates == nil
+      @total_hours_rate = lookup_rates.labor_rate.to_f * self.hours.to_f
+      @total_hours_rate.round
     end
   end
 

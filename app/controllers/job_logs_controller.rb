@@ -5,7 +5,7 @@ class JobLogsController < ApplicationController
   def index
   	@job_logs = JobLog.where(:subcontractor_id => current_user)
   end
-
+  
   def create
 		if @job_log.save
       flash[:notice] = "Your mileage and time were recorded successfully!"

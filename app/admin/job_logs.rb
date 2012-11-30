@@ -1,7 +1,6 @@
 ActiveAdmin.register JobLog do
    actions :all, :except => [:edit, :destroy]
 
-
    index do
   	column :id
   	column :date
