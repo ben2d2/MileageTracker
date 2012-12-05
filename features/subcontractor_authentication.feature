@@ -1,5 +1,4 @@
 Feature: Subcontractor authentication
-@wip
   Scenario: Signing in
     Given there is a subcontractor "ben@example.com" with password "foobar"
     When I go to the homepage
