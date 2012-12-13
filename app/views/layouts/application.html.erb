@@ -23,7 +23,10 @@
 		<header><%= image_tag ('logo.png'), height: '100px' %></header>
 		<div id="nav"><%- if subcontractor_signed_in? %>
 
-    <div id="nav_button"><%= link_to image_tag('job_log.png'), new_job_log_path, :alt => 'Job Log'  %>
+    <div id="nav_button">
+      <br><%= link_to 'Schedule', new_event_path %></div>
+
+      <div id="nav_button"><%= link_to image_tag('job_log.png'), new_job_log_path, :alt => 'Job Log'  %>
       <br><%= link_to 'Log Time & Miles', new_job_log_path %></div>
 
 		<div id="nav_button"><%= link_to image_tag('user_search.png'), :root, :alt => 'My Profile' %>
@@ -36,7 +39,10 @@
       <br><%= link_to 'Sign Out', destroy_subcontractor_session_path, method: :delete %></div>
 
 <%- else %>
-
+    <div id="nav_button">
+      <br><%= link_to 'Schedule', new_event_path %></div>
+          <div id="nav_button">
+      <br><%= link_to 'Calendar', calendar_path %></div>
 		<div id="nav_button"><%= link_to image_tag('login.png'), new_subcontractor_session_path, :alt => 'Sign In'  %>
       <br><%= link_to 'Sign In', new_subcontractor_session_path %></div>
 

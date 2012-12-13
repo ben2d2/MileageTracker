@@ -1,5 +1,8 @@
 MileageTracker::Application.routes.draw do
 
+  match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -13,6 +16,8 @@ MileageTracker::Application.routes.draw do
   resources :clients, only: [:index, :new, :create, :show]
 
   resources :job_logs, only: [:index, :new, :create]
+
+  resources :events, only: [:index, :new, :create, :show]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

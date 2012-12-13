@@ -1,0 +1,269 @@
+/* 
+  Event Calendar stylesheet
+  
+  Colors:
+  #d5d5d5 - border (gray)
+  #303030 - day names bg (gray)
+  #444 - number (gray)
+  #ecede2 - day header bg (light tan)
+  ##d7d7ba - today header bg (tan)
+  #ffffdd - today bg light (yellow)
+  #777 - other month number (gray)
+  #efefef - other month day header (gray)
+  #2eac6a - hover (green)
+*/
+@import url(http://fonts.googleapis.com/css?family=Sanchez);
+
+/* Outer most container */
+.ec-calendar {
+  font-family: 'Sanchez', serif;
+  margin: 0px;
+  font-size: 11px;
+  line-height: 14px;
+  margin: 0;
+  padding: 0;
+  border-bottom: 0px solid #d5d5d5;
+}
+
+/* Month name header & links */
+.ec-calendar-header {
+  padding: 5px 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.ec-month-name {
+  font-size: 16px;
+  font-weight: bold;
+  border-top: solid #333 1px;
+  border-bottom: solid #333 1px;
+  border-left: solid #333 0px;
+  border-right: solid #333 0px;
+  background-color: #e1e1e1
+}
+
+.ec-month-nav {
+  border: solid #333 1px;
+}
+
+/* Containers */
+.ec-body {
+  position: relative;
+  border-right: 1px solid #303030;
+  white-space: nowrap;
+  border-right: 0px;
+}
+
+/* Day names */
+.ec-day-names {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  table-layout: fixed;
+  padding: 0;
+  background: white;
+  color: #333;
+  border-top: solid #333 0px;
+  border-bottom: solid #333 1px;
+  border-left: solid #333 0px;
+  border-right: solid #333 0px;
+  margin-top: -3px;
+  margin-bottom: -3px;
+}
+
+.ec-day-name {
+  font-weight: normal;
+  border-left:1px;
+  border-bottom:1px;
+  background-color: #c1c1c1
+}
+
+/* Rows container and Row */
+.ec-rows {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  overflow: visible;
+}
+
+.ec-row {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: visible;
+  margin-top:-5px;
+
+}
+
+/* Background */
+.ec-row-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  table-layout: fixed;
+
+}
+
+.ec-day-bg {
+  border-top: solid #333 1px;
+  border-bottom: solid #333 1px;
+  border-left: solid #333 0px;
+  border-right: solid #333 1px;
+  margin:0px;
+  padding:0px;
+}
+
+.ec-today-bg {
+  background-color: #feeed5;
+}
+
+.ec-row-table {
+  position: relative;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Day header */
+.ec-day-header {
+  color: #444;
+  text-align: right;
+  padding: 0 5px;
+  line-height: 16px;
+  border-top: 0px solid #d5d5d5;
+  border-left: 0px solid #d5d5d5;
+  border-bottom: 1px dotted #bbbbbb;
+  background-color: #fbe1ba;
+  overflow: hidden;
+  margin-top:-3px;
+}
+
+a.ec-day-link {
+  color: #444;
+}
+
+.ec-today-header {
+  background-color: #faac38;
+}
+
+.ec-weekend-day-header {
+  
+}
+
+.ec-other-month-header {
+  background-color: #f1f1f1;
+  color: #a1a1a1;
+}
+
+.ec-other-month-bg {
+  
+}
+
+
+/* Event cell and container */
+.ec-event-cell {
+  cursor: pointer;
+  vertical-align: top;
+  padding-right: 1px;
+  padding-left: 1px;
+  padding-bottom: 1px;
+  border-left: solid 0px #333;
+  border-right: solid 1px #333;
+  border-bottom: solid 0px #333;
+  border-top: 0px;
+  margin: 0px;
+}
+
+.ec-event-cell a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ec-no-event-cell {
+  cursor: default;
+}
+
+.ec-event {
+  color: white;
+  padding-right: 1px;
+  padding-left: 11px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  -moz-border-radius: 3px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0px;
+}
+
+.ec-event :hover {
+  /* doesn't look as good as js highlighting */
+  /* background-color: #2eac6a; */
+}
+
+.ec-event-bg a {
+  color: white;
+}
+
+/* used to distinguish non-all_day events */
+.ec-event-no-bg {
+  position: relative;
+  /* padding-left: 5px; */
+}
+
+.ec-event-no-bg a {
+  /* isn't implemented in all browsers */
+  color: inherit;
+}
+
+.ec-event-time {
+  font-size: 85%;
+  font-weight: bold;
+  padding-right: 3px;
+}
+
+
+/* Left and right arrows */
+/* Doesn't work in IE6, use bg images instead */
+.ec-left-arrow, .ec-right-arrow {
+  position: relative;
+  top: 3px;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  margin-bottom: -8px;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+.ec-left-arrow {
+  margin-left: -7px;
+  margin-right: auto;
+  border-right: 4px solid white;
+}
+
+.ec-right-arrow {
+  margin-left: auto;
+  margin-right: 3px;
+  border-left: 4px solid white;
+}
+
+/* remove this to not have a bullet */
+/* don't look as good in ie */
+.ec-bullet {
+  position: absolute;
+  top: 7px;
+  width: 4px;
+  height: 4px;
+  margin-left: -7px;
+  margin-right: auto;
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  -moz-border-radius: 2px;
+}

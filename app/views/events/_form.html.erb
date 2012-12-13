@@ -1,0 +1,8 @@
+<%= simple_form_for @event do |f| %>
+  <p><%= f.input :client_id, collection: Client.all, :prompt => "Select a client" %></p>
+  <p><%= f.input :subcontractor_id, collection: Subcontractor.all, :prompt => "Select a subcontractor" %></p>
+  <p><%= f.input :start_at %></p>
+  <p><%= f.input :end_at %></p>
+  <p><%= f.input :color %></p>
+  <p><%= f.submit 'Create Event' %></p>
+<%- end %>
