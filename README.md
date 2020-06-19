@@ -1,4 +1,4 @@
-MileageTracker
+## MileageTracker
 
 MileageTracker is a capstone project application from the Nashville Software School - http://nashvillesoftwareschool.com.
 
