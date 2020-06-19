@@ -1,6 +1,6 @@
 ## MileageTracker
 
-MileageTracker is a capstone project application from the Nashville Software School - http://nashvillesoftwareschool.com.
+MileageTracker is a capstone project application from the (Nashville Software School)[http://nashvillesoftwareschool.com].
 
 The application allows subcontractor/users to input daily mileage and hours per the client serviced. Using ActiveAdmin the site owner can manage rates, subcontractors, clients, and job logs.
 
