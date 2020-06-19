@@ -2,10 +2,10 @@ MileageTracker(for Claxton Dietic Solutions)
 
 MileageTracker is a capstone project application from the Nashville Software School(http://nashvillesoftwareschool.com) The application allows subcontractor/users to input daily mileage and hours per the client serviced. Using ActiveAdmin the site owner can manage rates, subcontractors, clients, and job logs.
 
-• Subcontractors create accounts
-• Subcontractors record daily mileage and hours, known as Job Logs
-• Admins create client accounts
-• Admin manages mileage and labor rates per subcontractor/client relationship
+- Subcontractors create accounts
+- Subcontractors record daily mileage and hours, known as Job Logs
+- Admins create client accounts
+- Admin manages mileage and labor rates per subcontractor/client relationship
 
 Needs better test coverage on ActiveAdmin views and form entries
 
@@ -14,7 +14,7 @@ MileageTracker was authored by: Ben Bridges 615-423-3035 ben2d2@gmail.com
 Copyright © 2012 MileageTracker
 
 Future features to MileageTracker(for Claxton Dietic Solutions):
-• Admin records weekly menus per location
-• Admin records weekly subcontractor schedule
-• Admin billing and invoicing features
-• Subcontractor views for weekly schedules and menus
+- Admin records weekly menus per location
+- Admin records weekly subcontractor schedule
+- Admin billing and invoicing features
+- Subcontractor views for weekly schedules and menus
