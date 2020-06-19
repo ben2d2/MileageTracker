@@ -9,12 +9,6 @@ The application allows subcontractor/users to input daily mileage and hours per 
 - Admins create client accounts
 - Admin manages mileage and labor rates per subcontractor/client relationship
 
-MileageTracker was authored by:
-
-Ben Bridges 615-423-3035 ben2d2@gmail.com
-
-Copyright © 2012 MileageTracker
-
 Future features to MileageTracker:
 - Admin records weekly menus per location
 - Admin records weekly subcontractor schedule
